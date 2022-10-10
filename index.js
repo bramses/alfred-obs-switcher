@@ -52,6 +52,9 @@ try {
 
   app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
+  }).on('error', function(err) {
+    console.log('check ip address and port');
+    console.log(err);
   });
 } catch (error) {
   console.error("Failed to connect to OBS", error);
